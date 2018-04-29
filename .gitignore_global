@@ -1,0 +1,10 @@
+# Compiled files #
+##################
+*.o
+*.so
+a.out
+
+# Os/Editor Generated Files #
+#############################
+*.swp
+*.DS_Store
