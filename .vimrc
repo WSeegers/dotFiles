@@ -3,23 +3,47 @@
 
 " disable vi compatability
 set nocompatible
+
 " enable syntax highlighting
 syntax on
+
 " enable mouse
 set mouse=a
-" setup indentation
+
+" Disables throttling, smoother vim experience for fast connections
+set ttyfast
+
+" setup indentation to 4-wide non-expanded
 set tabstop=4
 set shiftwidth=4
+set noexpandtab
+
 " line wrapping at 80 char
 set textwidth=80
-" use indentation of previous line
-set autoindent
-" use intelligent indentation for C
+
+" Use intelligent indentation for C
 set smartindent
+
 " show line numbers
 set number
-" highlight matching braces
+
+" Always display the status line 
+set laststatus=2
+
+" Improved searching
+set hlsearch
 set showmatch
+set smartcase
+
+" Enabling unicode display
+set encoding=utf-8
+
+try
+    colorscheme desert
+catch
+endtry
 
 " Remap for tmux
 map <Esc>[B <Down>
+
+"set runtimepath^=~/.vim/bundle/42header.vim
