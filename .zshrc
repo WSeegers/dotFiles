@@ -99,3 +99,8 @@ export USER=wseegers
 
 # Custom aliases
 alias gccf="clang -Wall -Wextra -Werror $@"
+
+# Custom Functions
+function gcws() {
+	git clone https://github.com/WSeegers/"$1"
+}
