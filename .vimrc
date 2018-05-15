@@ -38,8 +38,11 @@ set smartcase
 " Enabling unicode display
 set encoding=utf-8
 
+" Setting colour scheme
+
 try
     colorscheme desert
+	highlight Normal guifg=gray guibg=grey17 gui=NONE ctermfg=250 ctermbg=235 cterm=NONE
 catch
 endtry
 
