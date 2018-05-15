@@ -1,10 +1,11 @@
 #!/bin/sh
-# .make.sh
-# This scrip will create back up old dot files and create symlinks to new dot files
+# Author: wseegers
+
+# Scrip will create back up old dot files and create symlinks to new dot files
 
 dir=~/dotfiles
 budir=~/backup_dotfiles
-files=".zshrc .vimrc .gitignore_global"
+files=".zshrc .vimrc .vim .gitignore_global"
 
 echo -n "Creating $budir"
 mkdir -p $budir
@@ -21,4 +22,8 @@ for file in $files; do
 	ln -s $dir/$file ~/$file
 done
 
+# Set .ignore global config
 git config --global core.excludesfile ~/.gitignore_global
+
+# Restart zsh for RC files to take effect
+exec zsh
