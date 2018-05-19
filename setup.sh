@@ -17,7 +17,7 @@ echo "...completed"
 
 for file in $files; do
 	echo "Moving $file to $budir"
-	mv ~/$file $budir/$file
+	mv -f ~/$file $budir/$file
 	echo "Creating link to new $file"
 	ln -s $dir/$file ~/$file
 done
@@ -26,4 +26,4 @@ done
 git config --global core.excludesfile ~/.gitignore_global
 
 # Restart zsh for RC files to take effect
-exec zsh
+#source $ZSH
