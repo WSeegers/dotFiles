@@ -20,6 +20,7 @@ set noexpandtab
 
 " line wrapping at 80 char
 set textwidth=80
+set fo=croqlt
 
 " Use intelligent indentation for C
 set smartindent
